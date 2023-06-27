@@ -21,12 +21,12 @@ public class PersonController {
     @PostMapping("/person")
     public String createPerson(@ModelAttribute Person person) {
         personList.add(person);
-        return "personCreated"; // This should be another HTML file confirming the creation
+        return "personCreated";
     }
 
     @GetMapping("/persons")
     public String viewPersons(Model model) {
         model.addAttribute("persons", personList);
-        return "persons"; // This should be a Thymeleaf HTML file displaying the persons
+        return "persons";
     }
 }
